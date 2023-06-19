@@ -1,0 +1,312 @@
+[gd_scene load_steps=30 format=3 uid="uid://bliobxrnw0gw5"]
+
+[ext_resource type="Texture2D" uid="uid://ciikuj1vc4kru" path="res://Assets/escenarios/mounts/m1/1.png" id="1_upc3k"]
+[ext_resource type="Script" path="res://Scripts/Background.gd" id="1_yfcpl"]
+[ext_resource type="Texture2D" uid="uid://b08ux77ak4ics" path="res://Assets/escenarios/mounts/m1/2.png" id="2_kl0gw"]
+[ext_resource type="Texture2D" uid="uid://ckr1tcuk6bhr1" path="res://Assets/escenarios/mounts/m1/3.png" id="3_q6ltw"]
+[ext_resource type="Texture2D" uid="uid://b0p3o88wp5jix" path="res://Assets/escenarios/mounts/m1/4.png" id="4_id8au"]
+[ext_resource type="Texture2D" uid="uid://d0v8j84gnywdj" path="res://Assets/escenarios/mounts/m1/5.png" id="5_svta1"]
+[ext_resource type="Texture2D" uid="uid://dl8c2s5wf0j6r" path="res://Assets/elementos/newlogo@2x.png" id="7_22fn6"]
+[ext_resource type="Texture2D" uid="uid://0cu5ldi6ttas" path="res://Assets/personajes/Spritesheet 128/Knight_1/Idle.png" id="7_fv3lt"]
+[ext_resource type="Texture2D" uid="uid://bhow30qjdkg0b" path="res://Assets/personajes/4 Vulture/Vulture_walk.png" id="7_o80l0"]
+[ext_resource type="AudioStream" uid="uid://c1f8w4s7neac2" path="res://Sonidos/Heart of Warrior.mp3" id="8_sende"]
+[ext_resource type="Texture2D" uid="uid://c8u880x6eoja7" path="res://Assets/personajes/player/run/0.png" id="9_nno7o"]
+[ext_resource type="Texture2D" uid="uid://d6s0k5pma3vp" path="res://Assets/personajes/player/run/1.png" id="10_pr6xh"]
+[ext_resource type="Texture2D" uid="uid://bt2o7c3drc3lo" path="res://Assets/personajes/player/run/2.png" id="11_1n43y"]
+[ext_resource type="Texture2D" uid="uid://b8kk3bmd6oyis" path="res://Assets/personajes/player/run/3.png" id="12_dutmd"]
+[ext_resource type="Texture2D" uid="uid://kx0f8428uatv" path="res://Assets/personajes/player/run/4.png" id="13_emapf"]
+[ext_resource type="Texture2D" uid="uid://hbyldgy2mefp" path="res://Assets/personajes/player/run/5.png" id="14_b1cjk"]
+[ext_resource type="Texture2D" uid="uid://ckcb56xypic3u" path="res://Assets/personajes/player/run/6.png" id="15_fa6j0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e7ub"]
+atlas = ExtResource("7_o80l0")
+region = Rect2(0, 5, 48, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lefom"]
+atlas = ExtResource("7_o80l0")
+region = Rect2(48, 5, 48, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58i32"]
+atlas = ExtResource("7_o80l0")
+region = Rect2(96, 5, 48, 43)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_352au"]
+atlas = ExtResource("7_o80l0")
+region = Rect2(144, 5, 48, 43)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7u2o3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e7ub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lefom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58i32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_352au")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pjk3"]
+atlas = ExtResource("7_fv3lt")
+region = Rect2(1, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pljv3"]
+atlas = ExtResource("7_fv3lt")
+region = Rect2(257, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uw6jg"]
+atlas = ExtResource("7_fv3lt")
+region = Rect2(129, 0, 64, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6wms"]
+atlas = ExtResource("7_fv3lt")
+region = Rect2(385, 0, 64, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sxkv5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pjk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pljv3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uw6jg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6wms")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_nno7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pr6xh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1n43y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dutmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_emapf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_b1cjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fa6j0")
+}],
+"loop": true,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tvao"]
+bg_color = Color(0.478431, 0.631373, 0.658824, 1)
+border_color = Color(0.121569, 0.380392, 0.447059, 1)
+
+[sub_resource type="ImageTexture" id="ImageTexture_61fnw"]
+
+[node name="Home" type="Node2D"]
+position = Vector2(112, 123)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(464, 201)
+
+[node name="Background" type="ParallaxBackground" parent="."]
+script = ExtResource("1_yfcpl")
+
+[node name="Sky" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.5, 0)
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Sky"]
+position = Vector2(575, 324)
+scale = Vector2(1.99653, 1.99691)
+texture = ExtResource("1_upc3k")
+
+[node name="Clouds" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.6, 0)
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Clouds"]
+position = Vector2(574, 324)
+scale = Vector2(1.99306, 2)
+texture = ExtResource("2_kl0gw")
+
+[node name="Mountain" type="ParallaxLayer" parent="Background"]
+position = Vector2(112, 123)
+motion_scale = Vector2(0.7, 0)
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Mountain"]
+position = Vector2(-112, -123)
+scale = Vector2(2, 2)
+texture = ExtResource("3_q6ltw")
+centered = false
+
+[node name="Valley1" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.8, 0)
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Valley1"]
+position = Vector2(576, 324)
+scale = Vector2(2, 2)
+texture = ExtResource("4_id8au")
+
+[node name="Valley2" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.9, 0)
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Valley2"]
+position = Vector2(-1, -3)
+scale = Vector2(2.00174, 2.00926)
+texture = ExtResource("5_svta1")
+centered = false
+
+[node name="Birds" type="ParallaxLayer" parent="Background"]
+position = Vector2(1338, 384)
+scale = Vector2(0.919229, 0.919228)
+
+[node name="birds" type="AnimatedSprite2D" parent="Background/Birds"]
+position = Vector2(-1362.01, -314.394)
+scale = Vector2(0.465043, 0.465043)
+sprite_frames = SubResource("SpriteFrames_7u2o3")
+animation = &"fly"
+frame_progress = 0.0972009
+
+[node name="birds2" type="AnimatedSprite2D" parent="Background/Birds"]
+position = Vector2(-1184.69, -367.7)
+scale = Vector2(0.283121, 0.283121)
+sprite_frames = SubResource("SpriteFrames_7u2o3")
+animation = &"fly"
+frame_progress = 0.672263
+
+[node name="birds3" type="AnimatedSprite2D" parent="Background/Birds"]
+position = Vector2(-966.028, -323.097)
+scale = Vector2(0.283121, 0.283121)
+sprite_frames = SubResource("SpriteFrames_7u2o3")
+animation = &"fly"
+frame_progress = 0.481558
+
+[node name="birds4" type="AnimatedSprite2D" parent="Background/Birds"]
+position = Vector2(-615.734, -341.591)
+scale = Vector2(0.283114, 0.283114)
+sprite_frames = SubResource("SpriteFrames_7u2o3")
+animation = &"fly"
+frame_progress = 0.890709
+
+[node name="birds5" type="AnimatedSprite2D" parent="Background/Birds"]
+position = Vector2(-73.9751, -348.118)
+scale = Vector2(0.283114, 0.283114)
+sprite_frames = SubResource("SpriteFrames_7u2o3")
+animation = &"fly"
+frame_progress = 0.173813
+
+[node name="birds6" type="AnimatedSprite2D" parent="Background/Birds"]
+position = Vector2(106.611, -301.34)
+scale = Vector2(0.283114, 0.283114)
+sprite_frames = SubResource("SpriteFrames_7u2o3")
+animation = &"fly"
+frame_progress = 0.972438
+
+[node name="birds7" type="AnimatedSprite2D" parent="Background/Birds"]
+position = Vector2(473.223, -345.942)
+scale = Vector2(0.283114, 0.283114)
+sprite_frames = SubResource("SpriteFrames_7u2o3")
+animation = &"fly"
+frame_progress = 0.203201
+
+[node name="birds8" type="AnimatedSprite2D" parent="Background/Birds"]
+position = Vector2(826.78, -292.637)
+scale = Vector2(0.283114, 0.283114)
+sprite_frames = SubResource("SpriteFrames_7u2o3")
+animation = &"fly"
+frame_progress = 0.737537
+
+[node name="MC" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.9, 0)
+
+[node name="Personaje" type="AnimatedSprite2D" parent="Background/MC"]
+position = Vector2(194, 380)
+scale = Vector2(0.919229, 0.919228)
+sprite_frames = SubResource("SpriteFrames_sxkv5")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.753381
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(875, -27)
+scale = Vector2(0.554147, 0.554147)
+texture = ExtResource("7_22fn6")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_sende")
+volume_db = -1.0
+pitch_scale = 1.06
+autoplay = true
+
+[node name="Info" type="Label" parent="."]
+offset_left = -87.0
+offset_top = 492.0
+offset_right = 143.0
+offset_bottom = 518.0
+text = "© e-Condor Digital. 2022-2023"
+horizontal_alignment = 1
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 738.0
+offset_top = 165.0
+offset_right = 992.0
+offset_bottom = 450.0
+
+[node name="VBoxButtons" type="VBoxContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.609
+offset_left = 30.0
+offset_top = 20.0
+offset_right = -12.0
+offset_bottom = 17.435
+alignment = 1
+
+[node name="Start2" type="Button" parent="Menu/VBoxButtons"]
+layout_mode = 2
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2tvao")
+action_mode = 0
+text = "START"
+icon = SubResource("ImageTexture_61fnw")
+
+[node name="Select2" type="Button" parent="Menu/VBoxButtons"]
+layout_mode = 2
+text = "SELECT"
+
+[node name="Options2" type="Button" parent="Menu/VBoxButtons"]
+layout_mode = 2
+text = "OPTIONS"
+
+[node name="Credits" type="Button" parent="Menu/VBoxButtons"]
+layout_mode = 2
+text = "CREDITS"
+
+[node name="Exit2" type="Button" parent="Menu/VBoxButtons"]
+layout_mode = 2
+text = "EXIT"
