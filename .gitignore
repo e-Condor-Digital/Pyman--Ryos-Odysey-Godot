@@ -12,3 +12,4 @@ addons/godot-git-plugin/macos/libgit_plugin.macos.editor.universal.dylib
 addons/godot-git-plugin/win64/libgit_plugin.windows.editor.x86_64.dll
 addons/godot-git-plugin/win64/libgit_plugin.windows.editor.x86_64.exp
 addons/godot-git-plugin/win64/libgit_plugin.windows.editor.x86_64.lib
+*.import
