@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dtkuptg4rtb87"
+path="res://.godot/imported/Heart of Warrior.ogg-5f68fa4eaeed35df4d8efcc011b9415b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/sonidos/Heart of Warrior.ogg"
+dest_files=["res://.godot/imported/Heart of Warrior.ogg-5f68fa4eaeed35df4d8efcc011b9415b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
