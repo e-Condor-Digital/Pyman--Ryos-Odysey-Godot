@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://bo0s76prb4wvw"]
+
+[ext_resource type="Script" path="res://Scripts/level_1.gd" id="1_3ls0r"]
+[ext_resource type="Texture2D" uid="uid://dx0c2ghrxknte" path="res://Assets/escenarios/mounts/m5/2.png" id="1_kgu0e"]
+[ext_resource type="Texture2D" uid="uid://b1m3b0ul6hypq" path="res://Assets/escenarios/mounts/m5/4.png" id="2_iv50h"]
+[ext_resource type="Texture2D" uid="uid://doae4wdrc35mq" path="res://Assets/escenarios/mounts/m5/3.png" id="2_jf3sg"]
+[ext_resource type="Texture2D" uid="uid://du307xp41tktq" path="res://Assets/escenarios/mounts/m5/5.png" id="4_m0etu"]
+
+[node name="Level1" type="Node2D"]
+position = Vector2(583, 324)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-7, -2)
+
+[node name="Background" type="ParallaxBackground" parent="."]
+script = ExtResource("1_3ls0r")
+
+[node name="Sky" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.5, 0)
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Sky"]
+position = Vector2(576, 322)
+scale = Vector2(1.12695, 1.125)
+texture = ExtResource("1_kgu0e")
+
+[node name="Clouds" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Clouds"]
+position = Vector2(576.5, 321.5)
+scale = Vector2(1.12598, 1.12326)
+texture = ExtResource("2_jf3sg")
+
+[node name="Back" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.7, 0)
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Back"]
+position = Vector2(575.75, 322)
+scale = Vector2(1.12646, 1.12674)
+texture = ExtResource("2_iv50h")
+
+[node name="Mountains" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.8, 0.7)
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Mountains"]
+position = Vector2(576, 324)
+scale = Vector2(1.12695, 1.125)
+texture = ExtResource("4_m0etu")

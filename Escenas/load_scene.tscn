@@ -1,0 +1,88 @@
+[gd_scene load_steps=6 format=3 uid="uid://yirv21ikf2ct"]
+
+[ext_resource type="Script" path="res://Scripts/load.gd" id="1_bukj4"]
+[ext_resource type="Texture2D" uid="uid://xu7toi018xpr" path="res://Assets/escenarios/mounts/m8/1_1.png" id="1_hwesc"]
+[ext_resource type="Script" path="res://Scripts/load_background.gd" id="2_1ckef"]
+[ext_resource type="Texture2D" uid="uid://bgvqlv4wpqqqr" path="res://Assets/escenarios/mounts/m8/2.png" id="2_58677"]
+[ext_resource type="Texture2D" uid="uid://cioocw6jeer0f" path="res://Assets/escenarios/mounts/m8/3.png" id="3_3yofy"]
+
+[node name="Load_scene" type="Node2D"]
+script = ExtResource("1_bukj4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 324)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+script = ExtResource("2_1ckef")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.55, 1)
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(288, 320)
+scale = Vector2(1, 1.18519)
+texture = ExtResource("1_hwesc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(864, 320)
+scale = Vector2(1, 1.18519)
+texture = ExtResource("1_hwesc")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.61, 1)
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(288, 352)
+texture = ExtResource("2_58677")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(864, 352)
+texture = ExtResource("2_58677")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.701, 1)
+motion_mirroring = Vector2(1146, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(288, 352)
+texture = ExtResource("3_3yofy")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(864, 352)
+texture = ExtResource("3_3yofy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 144.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_top = 504.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 472.0
+offset_top = 536.0
+offset_right = 680.0
+offset_bottom = 587.0
+text = "Empezando la aventura..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_top = 616.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="continue_button" type="Button" parent="."]
+offset_left = 392.0
+offset_top = 544.0
+offset_right = 776.0
+offset_bottom = 576.0
+text = "Haz click para continuar..."
+
+[connection signal="pressed" from="continue_button" to="." method="_on_button_pressed"]

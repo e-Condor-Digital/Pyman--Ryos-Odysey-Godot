@@ -10,6 +10,8 @@ extends ParallaxBackground
 @onready var bird7 = $Birds/birds7
 @onready var bird8 = $Birds/birds8
 
+var time_load = 1000
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -27,3 +29,7 @@ func _process(delta):
 	bird6.play("fly")
 	bird7.play("fly")
 	bird8.play("fly")
+
+
+func _on_start_2_pressed():
+	get_tree().change_scene_to_file("res://Escenas/load_scene.tscn") # Replace with function body.
