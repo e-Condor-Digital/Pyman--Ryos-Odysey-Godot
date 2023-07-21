@@ -32,4 +32,4 @@ func _process(delta):
 
 
 func _on_start_2_pressed():
-	get_tree().change_scene_to_file("res://Escenas/load_scene.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://Escenas/load_scene.tscn")

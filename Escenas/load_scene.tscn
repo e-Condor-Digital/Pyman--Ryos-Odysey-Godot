@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://yirv21ikf2ct"]
+[gd_scene load_steps=7 format=3 uid="uid://yirv21ikf2ct"]
 
 [ext_resource type="Script" path="res://Scripts/load.gd" id="1_bukj4"]
-[ext_resource type="Texture2D" uid="uid://xu7toi018xpr" path="res://Assets/escenarios/mounts/m8/1_1.png" id="1_hwesc"]
+[ext_resource type="Texture2D" uid="uid://cp05da6m3lywy" path="res://Assets/escenarios/mounts/m8/1_1.png" id="1_hwesc"]
 [ext_resource type="Script" path="res://Scripts/load_background.gd" id="2_1ckef"]
-[ext_resource type="Texture2D" uid="uid://bgvqlv4wpqqqr" path="res://Assets/escenarios/mounts/m8/2.png" id="2_58677"]
-[ext_resource type="Texture2D" uid="uid://cioocw6jeer0f" path="res://Assets/escenarios/mounts/m8/3.png" id="3_3yofy"]
+[ext_resource type="Texture2D" uid="uid://bbqoymna8bx0j" path="res://Assets/escenarios/mounts/m8/2.png" id="2_58677"]
+[ext_resource type="Texture2D" uid="uid://dyql145jdublj" path="res://Assets/escenarios/mounts/m8/3.png" id="3_3yofy"]
+[ext_resource type="FontFile" uid="uid://mfr466jdi0ph" path="res://Fonts/Enchanted Land.otf" id="6_k3oh7"]
 
-[node name="Load_scene" type="Node2D"]
+[node name="Load_scene" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_bukj4")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -54,17 +57,20 @@ position = Vector2(864, 352)
 texture = ExtResource("3_3yofy")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 144.0
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
 offset_top = 504.0
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 472.0
 offset_top = 536.0
 offset_right = 680.0
@@ -73,16 +79,33 @@ text = "Empezando la aventura..."
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 471.0
+offset_top = 26.0
+offset_right = 654.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("6_k3oh7")
+theme_override_font_sizes/font_size = 39
+text = "Capítulo I:
+Alma de dragón"
+horizontal_alignment = 1
+
 [node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 0
 offset_top = 616.0
 offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="continue_button" type="Button" parent="."]
-offset_left = 392.0
-offset_top = 544.0
-offset_right = 776.0
-offset_bottom = 576.0
+layout_mode = 0
+offset_left = 458.0
+offset_top = 545.0
+offset_right = 693.0
+offset_bottom = 579.0
+theme_override_colors/font_color = Color(0.8, 0.67451, 0.054902, 1)
+theme_override_fonts/font = ExtResource("6_k3oh7")
+theme_override_font_sizes/font_size = 22
 text = "Haz click para continuar..."
 
-[connection signal="pressed" from="continue_button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="continue_button" to="." method="_on_continue_button_pressed"]

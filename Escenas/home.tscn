@@ -1,38 +1,25 @@
-[gd_scene load_steps=31 format=3 uid="uid://bliobxrnw0gw5"]
+[gd_scene load_steps=18 format=3 uid="uid://bliobxrnw0gw5"]
 
-[ext_resource type="Texture2D" uid="uid://0ukmompwd12r" path="res://Assets/escenarios/mounts/m1/1.png" id="1_upc3k"]
+[ext_resource type="Texture2D" uid="uid://1ehjohoamo6t" path="res://Assets/escenarios/mounts/m1/1.png" id="1_upc3k"]
 [ext_resource type="Script" path="res://Scripts/Background.gd" id="1_yfcpl"]
-[ext_resource type="Texture2D" uid="uid://dk2xiityqipi5" path="res://Assets/escenarios/mounts/m1/2.png" id="2_kl0gw"]
-[ext_resource type="Texture2D" uid="uid://cgewhd1ocodnd" path="res://Assets/escenarios/mounts/m1/3.png" id="3_q6ltw"]
-[ext_resource type="Texture2D" uid="uid://ddjy8ag0f0764" path="res://Assets/escenarios/mounts/m1/4.png" id="4_id8au"]
-[ext_resource type="Texture2D" uid="uid://bacev1bd0r4es" path="res://Assets/escenarios/mounts/m1/5.png" id="5_svta1"]
-[ext_resource type="Texture2D" uid="uid://dhdnfp4k8pluq" path="res://Assets/elementos/newlogo@2x.png" id="7_22fn6"]
-[ext_resource type="Texture2D" uid="uid://7cm3d7karsng" path="res://Assets/personajes/Spritesheet 128/Knight_1/Idle.png" id="7_fv3lt"]
-[ext_resource type="Texture2D" uid="uid://ducfnm26r6uh6" path="res://Assets/personajes/4 Vulture/Vulture_walk.png" id="7_o80l0"]
+[ext_resource type="Texture2D" uid="uid://li2mce810ds8" path="res://Assets/escenarios/mounts/m1/2.png" id="2_kl0gw"]
+[ext_resource type="Texture2D" uid="uid://8lgwf4cvqiem" path="res://Assets/escenarios/mounts/m1/3.png" id="3_q6ltw"]
+[ext_resource type="Texture2D" uid="uid://bmeora4oae2fo" path="res://Assets/escenarios/mounts/m1/4.png" id="4_id8au"]
+[ext_resource type="Texture2D" uid="uid://d2j1jdeemb4gy" path="res://Assets/escenarios/mounts/m1/5.png" id="5_svta1"]
+[ext_resource type="Texture2D" uid="uid://bkmh4f6wvi0md" path="res://Assets/elementos/newlogo@2x.png" id="7_22fn6"]
 [ext_resource type="AudioStream" uid="uid://c1f8w4s7neac2" path="res://Sonidos/Heart of Warrior.mp3" id="8_sende"]
-[ext_resource type="Texture2D" uid="uid://dttqilln86dnx" path="res://Assets/personajes/player/run/0.png" id="9_nno7o"]
-[ext_resource type="Texture2D" uid="uid://dkd7xp8if3unb" path="res://Assets/personajes/player/run/1.png" id="10_pr6xh"]
-[ext_resource type="Texture2D" uid="uid://dasee7ww1tb74" path="res://Assets/personajes/player/run/2.png" id="11_1n43y"]
-[ext_resource type="Texture2D" uid="uid://bdqc4yq6cf4ym" path="res://Assets/personajes/player/run/3.png" id="12_dutmd"]
-[ext_resource type="Texture2D" uid="uid://dbj3b50ao6n01" path="res://Assets/personajes/player/run/4.png" id="13_emapf"]
-[ext_resource type="Texture2D" uid="uid://x57ph7b1ox2t" path="res://Assets/personajes/player/run/5.png" id="14_b1cjk"]
-[ext_resource type="Texture2D" uid="uid://beyirma0jb6kl" path="res://Assets/personajes/player/run/6.png" id="15_fa6j0"]
 [ext_resource type="Script" path="res://Scripts/Buttons.gd" id="18_mc46c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3e7ub"]
-atlas = ExtResource("7_o80l0")
 region = Rect2(0, 5, 48, 43)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lefom"]
-atlas = ExtResource("7_o80l0")
 region = Rect2(48, 5, 48, 43)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_58i32"]
-atlas = ExtResource("7_o80l0")
 region = Rect2(96, 5, 48, 43)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_352au"]
-atlas = ExtResource("7_o80l0")
 region = Rect2(144, 5, 48, 43)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7u2o3"]
@@ -55,66 +42,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2pjk3"]
-atlas = ExtResource("7_fv3lt")
-region = Rect2(1, 0, 64, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pljv3"]
-atlas = ExtResource("7_fv3lt")
-region = Rect2(257, 0, 64, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_uw6jg"]
-atlas = ExtResource("7_fv3lt")
-region = Rect2(129, 0, 64, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_o6wms"]
-atlas = ExtResource("7_fv3lt")
-region = Rect2(385, 0, 64, 128)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_sxkv5"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_8xc7f"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2pjk3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pljv3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_uw6jg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_o6wms")
-}],
+"frames": [],
 "loop": true,
 "name": &"Idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_nno7o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_pr6xh")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_1n43y")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_dutmd")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_emapf")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_b1cjk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_fa6j0")
-}],
-"loop": true,
-"name": &"Run",
-"speed": 5.0
+"speed": 7.0
 }]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tvao"]
@@ -243,13 +176,12 @@ frame_progress = 0.737537
 [node name="MC" type="ParallaxLayer" parent="Background"]
 motion_scale = Vector2(0.9, 0)
 
-[node name="Personaje" type="AnimatedSprite2D" parent="Background/MC"]
-position = Vector2(194, 380)
-scale = Vector2(0.919229, 0.919228)
-sprite_frames = SubResource("SpriteFrames_sxkv5")
+[node name="Player" type="AnimatedSprite2D" parent="Background/MC"]
+position = Vector2(186, 371)
+scale = Vector2(1.95, 1.95)
+sprite_frames = SubResource("SpriteFrames_8xc7f")
 animation = &"Idle"
-autoplay = "Idle"
-frame_progress = 0.753381
+frame_progress = 0.402836
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(875, -27)
