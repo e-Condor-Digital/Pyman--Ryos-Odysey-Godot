@@ -1,11 +1,104 @@
-[gd_scene load_steps=7 format=3 uid="uid://yirv21ikf2ct"]
+[gd_scene load_steps=21 format=3 uid="uid://yirv21ikf2ct"]
 
 [ext_resource type="Script" path="res://Scripts/load.gd" id="1_bukj4"]
 [ext_resource type="Texture2D" uid="uid://cp05da6m3lywy" path="res://Assets/escenarios/mounts/m8/1_1.png" id="1_hwesc"]
 [ext_resource type="Script" path="res://Scripts/load_background.gd" id="2_1ckef"]
 [ext_resource type="Texture2D" uid="uid://bbqoymna8bx0j" path="res://Assets/escenarios/mounts/m8/2.png" id="2_58677"]
 [ext_resource type="Texture2D" uid="uid://dyql145jdublj" path="res://Assets/escenarios/mounts/m8/3.png" id="3_3yofy"]
+[ext_resource type="Texture2D" uid="uid://bmbumyki7ofym" path="res://Assets/personajes/Enemigos/dragon2.png" id="6_h1n3k"]
 [ext_resource type="FontFile" uid="uid://mfr466jdi0ph" path="res://Fonts/Enchanted Land.otf" id="6_k3oh7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cb5f"]
+atlas = ExtResource("6_h1n3k")
+region = Rect2(0, 0, 446, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcc2x"]
+atlas = ExtResource("6_h1n3k")
+region = Rect2(446, 0, 446, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcs7k"]
+atlas = ExtResource("6_h1n3k")
+region = Rect2(892, 0, 446, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhyys"]
+atlas = ExtResource("6_h1n3k")
+region = Rect2(1338, 0, 446, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ax5g1"]
+atlas = ExtResource("6_h1n3k")
+region = Rect2(1784, 0, 446, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yito"]
+atlas = ExtResource("6_h1n3k")
+region = Rect2(2230, 0, 446, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ogme6"]
+atlas = ExtResource("6_h1n3k")
+region = Rect2(0, 395, 446, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txt0f"]
+atlas = ExtResource("6_h1n3k")
+region = Rect2(446, 395, 446, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1xcr"]
+atlas = ExtResource("6_h1n3k")
+region = Rect2(892, 395, 446, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brsmt"]
+atlas = ExtResource("6_h1n3k")
+region = Rect2(1338, 395, 446, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6fft"]
+atlas = ExtResource("6_h1n3k")
+region = Rect2(1784, 395, 446, 395)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w5vjm"]
+atlas = ExtResource("6_h1n3k")
+region = Rect2(2230, 395, 446, 395)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3piij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cb5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jcc2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcs7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhyys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ax5g1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3yito")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ogme6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txt0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1xcr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brsmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6fft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w5vjm")
+}],
+"loop": true,
+"name": &"Move",
+"speed": 7.0
+}]
 
 [node name="Load_scene" type="Control"]
 layout_mode = 3
@@ -55,6 +148,17 @@ texture = ExtResource("3_3yofy")
 [node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
 position = Vector2(864, 352)
 texture = ExtResource("3_3yofy")
+
+[node name="Dragon" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(2202, 736)
+scale = Vector2(0.919229, 0.919228)
+
+[node name="dragon" type="AnimatedSprite2D" parent="ParallaxBackground/Dragon"]
+position = Vector2(-1809.13, -553.726)
+scale = Vector2(0.32685, 0.301425)
+sprite_frames = SubResource("SpriteFrames_3piij")
+animation = &"Move"
+frame_progress = 0.957173
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
