@@ -1,14 +1,8 @@
 extends ParallaxBackground
 
-@onready var mc = $MC/Personaje
-@onready var bird = $Birds/birds
-@onready var bird2 = $Birds/birds2
-@onready var bird3 = $Birds/birds3
-@onready var bird4 = $Birds/birds4
-@onready var bird5 = $Birds/birds5
-@onready var bird6 = $Birds/birds6
-@onready var bird7 = $Birds/birds7
-@onready var bird8 = $Birds/birds8
+@onready var mc_1 = $Jugador/Player2
+@onready var dragon = $Dragon/dragon
+@onready var dragon2 = $Dragon2/dragon2
 
 var time_load = 1000
 
@@ -19,16 +13,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	scroll_base_offset.x -= 20*delta
-	mc.play("Idle")
-	bird.play("fly")
-	bird2.play("fly")
-	bird3.play("fly")
-	bird4.play("fly")
-	bird5.play("fly")
-	bird6.play("fly")
-	bird7.play("fly")
-	bird8.play("fly")
+	scroll_base_offset.x -= 30*delta
+	dragon.play("Move")
+	dragon2.play("Move")
+	mc_1.play("Run")
 
 
 func _on_start_2_pressed():
