@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bliobxrnw0gw5"]
+[gd_scene load_steps=40 format=3 uid="uid://bliobxrnw0gw5"]
 
 [ext_resource type="Texture2D" uid="uid://1ehjohoamo6t" path="res://Assets/escenarios/mounts/m1/1.png" id="1_upc3k"]
 [ext_resource type="Script" path="res://Scripts/Background.gd" id="1_yfcpl"]
@@ -7,46 +7,191 @@
 [ext_resource type="Texture2D" uid="uid://bmeora4oae2fo" path="res://Assets/escenarios/mounts/m1/4.png" id="4_id8au"]
 [ext_resource type="Texture2D" uid="uid://d2j1jdeemb4gy" path="res://Assets/escenarios/mounts/m1/5.png" id="5_svta1"]
 [ext_resource type="Texture2D" uid="uid://bkmh4f6wvi0md" path="res://Assets/elementos/newlogo@2x.png" id="7_22fn6"]
+[ext_resource type="Texture2D" uid="uid://dy4h30axgkau8" path="res://Assets/personajes/Personajes/Spritesheet 128/Knight_2/Idle.png" id="7_43ub0"]
+[ext_resource type="Texture2D" uid="uid://78ssm3618vgw" path="res://Assets/personajes/Personajes/Spritesheet 128/Knight_2/Run.png" id="8_mpgus"]
 [ext_resource type="AudioStream" uid="uid://c1f8w4s7neac2" path="res://Sonidos/Heart of Warrior.mp3" id="8_sende"]
+[ext_resource type="Texture2D" uid="uid://1pmddiy552qa" path="res://Assets/personajes/Enemigos/dragon.png" id="9_kuvhx"]
 [ext_resource type="Script" path="res://Scripts/Buttons.gd" id="18_mc46c"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3e7ub"]
-region = Rect2(0, 5, 48, 43)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlmeb"]
+atlas = ExtResource("9_kuvhx")
+region = Rect2(0, 0, 446, 397)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lefom"]
-region = Rect2(48, 5, 48, 43)
+[sub_resource type="AtlasTexture" id="AtlasTexture_idp8d"]
+atlas = ExtResource("9_kuvhx")
+region = Rect2(446, 0, 446, 397)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_58i32"]
-region = Rect2(96, 5, 48, 43)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kosg"]
+atlas = ExtResource("9_kuvhx")
+region = Rect2(892, 0, 446, 397)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_352au"]
-region = Rect2(144, 5, 48, 43)
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfoo6"]
+atlas = ExtResource("9_kuvhx")
+region = Rect2(1338, 0, 446, 397)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0komt"]
+atlas = ExtResource("9_kuvhx")
+region = Rect2(1784, 0, 446, 397)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jojd"]
+atlas = ExtResource("9_kuvhx")
+region = Rect2(2230, 0, 446, 397)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txu4v"]
+atlas = ExtResource("9_kuvhx")
+region = Rect2(0, 397, 446, 397)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ef0t8"]
+atlas = ExtResource("9_kuvhx")
+region = Rect2(446, 397, 446, 397)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uu6g6"]
+atlas = ExtResource("9_kuvhx")
+region = Rect2(892, 397, 446, 397)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wr6ph"]
+atlas = ExtResource("9_kuvhx")
+region = Rect2(1338, 397, 446, 397)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kb6dk"]
+atlas = ExtResource("9_kuvhx")
+region = Rect2(1784, 397, 446, 397)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7t2a8"]
+atlas = ExtResource("9_kuvhx")
+region = Rect2(2230, 397, 446, 397)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7u2o3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3e7ub")
+"texture": SubResource("AtlasTexture_xlmeb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lefom")
+"texture": SubResource("AtlasTexture_idp8d")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_58i32")
+"texture": SubResource("AtlasTexture_2kosg")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_352au")
+"texture": SubResource("AtlasTexture_bfoo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0komt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jojd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txu4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ef0t8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uu6g6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wr6ph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kb6dk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7t2a8")
 }],
 "loop": true,
-"name": &"fly",
-"speed": 5.0
+"name": &"Move",
+"speed": 7.0
 }]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqupn"]
+atlas = ExtResource("7_43ub0")
+region = Rect2(0, 60, 128, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yurx"]
+atlas = ExtResource("7_43ub0")
+region = Rect2(128, 60, 128, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5u1mw"]
+atlas = ExtResource("7_43ub0")
+region = Rect2(256, 60, 128, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0a0p"]
+atlas = ExtResource("7_43ub0")
+region = Rect2(384, 60, 128, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21k8p"]
+atlas = ExtResource("8_mpgus")
+region = Rect2(0, 49, 125, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u63nt"]
+atlas = ExtResource("8_mpgus")
+region = Rect2(125, 49, 125, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ar7f"]
+atlas = ExtResource("8_mpgus")
+region = Rect2(250, 49, 125, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhy1h"]
+atlas = ExtResource("8_mpgus")
+region = Rect2(375, 49, 125, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5o3ik"]
+atlas = ExtResource("8_mpgus")
+region = Rect2(500, 49, 125, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unc66"]
+atlas = ExtResource("8_mpgus")
+region = Rect2(625, 49, 125, 78)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avxha"]
+atlas = ExtResource("8_mpgus")
+region = Rect2(750, 49, 125, 78)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8xc7f"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqupn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yurx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5u1mw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0a0p")
+}],
 "loop": true,
 "name": &"Idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21k8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u63nt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ar7f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhy1h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5o3ik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_unc66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avxha")
+}],
+"loop": true,
+"name": &"Run",
 "speed": 7.0
 }]
 
@@ -83,6 +228,17 @@ position = Vector2(574, 324)
 scale = Vector2(1.99306, 2)
 texture = ExtResource("2_kl0gw")
 
+[node name="Dragon2" type="ParallaxLayer" parent="Background"]
+position = Vector2(1338, 384)
+scale = Vector2(0.919229, 0.919228)
+
+[node name="dragon2" type="AnimatedSprite2D" parent="Background/Dragon2"]
+position = Vector2(-94.6448, -120.753)
+scale = Vector2(0.235461, 0.235461)
+sprite_frames = SubResource("SpriteFrames_7u2o3")
+animation = &"Move"
+frame_progress = 0.852397
+
 [node name="Mountain" type="ParallaxLayer" parent="Background"]
 position = Vector2(112, 123)
 motion_scale = Vector2(0.7, 0)
@@ -113,75 +269,26 @@ scale = Vector2(2.00174, 2.00926)
 texture = ExtResource("5_svta1")
 centered = false
 
-[node name="Birds" type="ParallaxLayer" parent="Background"]
+[node name="Jugador" type="ParallaxLayer" parent="Background"]
+motion_scale = Vector2(0.9, 0)
+
+[node name="Player2" type="AnimatedSprite2D" parent="Background/Jugador"]
+position = Vector2(1245, 431)
+scale = Vector2(1.31217, 1.25968)
+sprite_frames = SubResource("SpriteFrames_8xc7f")
+animation = &"Run"
+frame_progress = 0.257704
+
+[node name="Dragon" type="ParallaxLayer" parent="Background"]
 position = Vector2(1338, 384)
 scale = Vector2(0.919229, 0.919228)
 
-[node name="birds" type="AnimatedSprite2D" parent="Background/Birds"]
-position = Vector2(-1362.01, -314.394)
-scale = Vector2(0.465043, 0.465043)
+[node name="dragon" type="AnimatedSprite2D" parent="Background/Dragon"]
+position = Vector2(-1310.88, -307.867)
+scale = Vector2(0.235461, 0.235461)
 sprite_frames = SubResource("SpriteFrames_7u2o3")
-animation = &"fly"
-frame_progress = 0.0972009
-
-[node name="birds2" type="AnimatedSprite2D" parent="Background/Birds"]
-position = Vector2(-1184.69, -367.7)
-scale = Vector2(0.283121, 0.283121)
-sprite_frames = SubResource("SpriteFrames_7u2o3")
-animation = &"fly"
-frame_progress = 0.672263
-
-[node name="birds3" type="AnimatedSprite2D" parent="Background/Birds"]
-position = Vector2(-966.028, -323.097)
-scale = Vector2(0.283121, 0.283121)
-sprite_frames = SubResource("SpriteFrames_7u2o3")
-animation = &"fly"
-frame_progress = 0.481558
-
-[node name="birds4" type="AnimatedSprite2D" parent="Background/Birds"]
-position = Vector2(-615.734, -341.591)
-scale = Vector2(0.283114, 0.283114)
-sprite_frames = SubResource("SpriteFrames_7u2o3")
-animation = &"fly"
-frame_progress = 0.890709
-
-[node name="birds5" type="AnimatedSprite2D" parent="Background/Birds"]
-position = Vector2(-73.9751, -348.118)
-scale = Vector2(0.283114, 0.283114)
-sprite_frames = SubResource("SpriteFrames_7u2o3")
-animation = &"fly"
-frame_progress = 0.173813
-
-[node name="birds6" type="AnimatedSprite2D" parent="Background/Birds"]
-position = Vector2(106.611, -301.34)
-scale = Vector2(0.283114, 0.283114)
-sprite_frames = SubResource("SpriteFrames_7u2o3")
-animation = &"fly"
-frame_progress = 0.972438
-
-[node name="birds7" type="AnimatedSprite2D" parent="Background/Birds"]
-position = Vector2(473.223, -345.942)
-scale = Vector2(0.283114, 0.283114)
-sprite_frames = SubResource("SpriteFrames_7u2o3")
-animation = &"fly"
-frame_progress = 0.203201
-
-[node name="birds8" type="AnimatedSprite2D" parent="Background/Birds"]
-position = Vector2(826.78, -292.637)
-scale = Vector2(0.283114, 0.283114)
-sprite_frames = SubResource("SpriteFrames_7u2o3")
-animation = &"fly"
-frame_progress = 0.737537
-
-[node name="MC" type="ParallaxLayer" parent="Background"]
-motion_scale = Vector2(0.9, 0)
-
-[node name="Player" type="AnimatedSprite2D" parent="Background/MC"]
-position = Vector2(186, 371)
-scale = Vector2(1.95, 1.95)
-sprite_frames = SubResource("SpriteFrames_8xc7f")
-animation = &"Idle"
-frame_progress = 0.402836
+animation = &"Move"
+frame_progress = 0.0167307
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(875, -27)
@@ -215,10 +322,10 @@ layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.609
-offset_left = 30.0
-offset_top = 20.0
-offset_right = -12.0
-offset_bottom = 17.435
+offset_left = -373.0
+offset_top = 129.0
+offset_right = -415.0
+offset_bottom = 126.435
 alignment = 1
 
 [node name="Start2" type="Button" parent="Menu/VBoxButtons"]
