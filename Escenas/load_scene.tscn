@@ -162,14 +162,14 @@ frame_progress = 0.957173
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1152.0
+offset_right = 1157.0
 offset_bottom = 144.0
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 layout_mode = 0
 offset_top = 504.0
-offset_right = 1152.0
+offset_right = 1164.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bliobxrnw0gw5"]
+[gd_scene load_steps=46 format=3 uid="uid://bliobxrnw0gw5"]
 
 [ext_resource type="Texture2D" uid="uid://1ehjohoamo6t" path="res://Assets/escenarios/mounts/m1/1.png" id="1_upc3k"]
 [ext_resource type="Script" path="res://Scripts/Background.gd" id="1_yfcpl"]
@@ -11,6 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://78ssm3618vgw" path="res://Assets/personajes/Personajes/Spritesheet 128/Knight_2/Run.png" id="8_mpgus"]
 [ext_resource type="AudioStream" uid="uid://c1f8w4s7neac2" path="res://Sonidos/Heart of Warrior.mp3" id="8_sende"]
 [ext_resource type="Texture2D" uid="uid://1pmddiy552qa" path="res://Assets/personajes/Enemigos/dragon.png" id="9_kuvhx"]
+[ext_resource type="StyleBox" uid="uid://bymvmwwxosi11" path="res://Estilos/start_but_press.tres" id="12_7f0vc"]
+[ext_resource type="StyleBox" uid="uid://bapitccgu4u0m" path="res://Estilos/start_but_hover.tres" id="13_8o8i7"]
+[ext_resource type="StyleBox" uid="uid://vb3godjwpkf2" path="res://Estilos/cred_but.tres" id="15_6jbb8"]
+[ext_resource type="StyleBox" uid="uid://dth6suxv72hu4" path="res://Estilos/cred_but_press.tres" id="17_fdl5k"]
 [ext_resource type="Script" path="res://Scripts/Buttons.gd" id="18_mc46c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xlmeb"]
@@ -195,11 +199,28 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tvao"]
-bg_color = Color(0.478431, 0.631373, 0.658824, 1)
-border_color = Color(0.121569, 0.380392, 0.447059, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q1olb"]
+bg_color = Color(0.988235, 0.345098, 0.388235, 1)
+border_width_bottom = 5
+border_color = Color(0.45098, 0.0352941, 0.0352941, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="ImageTexture" id="ImageTexture_61fnw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukevx"]
+bg_color = Color(0.345098, 0.443137, 0.968627, 1)
+border_width_bottom = 2
+border_color = Color(0.372549, 0.431373, 0.937255, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f11ht"]
+bg_color = Color(0.827451, 0.517647, 0.207843, 1)
 
 [node name="Home" type="Node2D"]
 position = Vector2(112, 123)
@@ -311,26 +332,30 @@ horizontal_alignment = 1
 
 [node name="Menu" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_left = 738.0
-offset_top = 165.0
-offset_right = 992.0
-offset_bottom = 450.0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+grow_vertical = 2
 
 [node name="VBoxButtons" type="VBoxContainer" parent="Menu"]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 14
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.609
-offset_left = -373.0
-offset_top = 129.0
-offset_right = -415.0
-offset_bottom = 126.435
+anchor_bottom = 0.5
+offset_left = 335.0
+offset_top = 323.0
+offset_right = 592.0
+offset_bottom = 452.0
+grow_horizontal = 2
+grow_vertical = 2
 alignment = 1
 
 [node name="Start2" type="Button" parent="Menu/VBoxButtons"]
 layout_mode = 2
-theme_override_styles/pressed = SubResource("StyleBoxFlat_2tvao")
+theme_override_styles/normal = ExtResource("12_7f0vc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_q1olb")
+theme_override_styles/pressed = ExtResource("13_8o8i7")
 action_mode = 0
 text = "START"
 icon = SubResource("ImageTexture_61fnw")
@@ -338,10 +363,14 @@ script = ExtResource("18_mc46c")
 
 [node name="Credits" type="Button" parent="Menu/VBoxButtons"]
 layout_mode = 2
+theme_override_styles/normal = ExtResource("15_6jbb8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ukevx")
+theme_override_styles/pressed = ExtResource("17_fdl5k")
 text = "CREDITS"
 
 [node name="Exit2" type="Button" parent="Menu/VBoxButtons"]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_f11ht")
 text = "EXIT"
 script = ExtResource("18_mc46c")
 

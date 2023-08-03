@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3a5b77qd2di3"]
+
+[ext_resource type="Script" path="res://Scripts/main_screen.gd" id="1_21aqf"]
+[ext_resource type="Texture2D" uid="uid://35s7maho1lmv" path="res://Recrusos temporales/econdor-logo.png" id="6_csr5x"]
+
+[node name="main_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_21aqf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 322)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 649.0
+
+[node name="logo" type="Sprite2D" parent="."]
+position = Vector2(577, 324)
+scale = Vector2(0.274927, 0.264032)
+texture = ExtResource("6_csr5x")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+layout_mode = 0
+offset_top = 616.0
+offset_right = 1152.0
+offset_bottom = 648.0
+show_percentage = false
