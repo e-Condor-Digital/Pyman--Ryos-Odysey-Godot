@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d3a5b77qd2di3"]
 
 [ext_resource type="Script" path="res://Scripts/main_screen.gd" id="1_21aqf"]
-[ext_resource type="Texture2D" uid="uid://35s7maho1lmv" path="res://Recrusos temporales/econdor-logo.png" id="6_csr5x"]
+[ext_resource type="Texture2D" uid="uid://cft85de0xsauh" path="res://Recrusos temporales/econdor-logo.png" id="6_csr5x"]
 
 [node name="main_screen" type="Control"]
 layout_mode = 3
