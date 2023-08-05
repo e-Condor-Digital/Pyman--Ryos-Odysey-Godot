@@ -1,16 +1,16 @@
 [gd_scene load_steps=46 format=3 uid="uid://bliobxrnw0gw5"]
 
-[ext_resource type="Texture2D" uid="uid://cg2510gb45c7l" path="res://Assets/escenarios/mounts/m1/1.png" id="1_upc3k"]
+[ext_resource type="Texture2D" uid="uid://4pawta06la7x" path="res://Assets/escenarios/mounts/m1/1.png" id="1_upc3k"]
 [ext_resource type="Script" path="res://Scripts/Background.gd" id="1_yfcpl"]
-[ext_resource type="Texture2D" uid="uid://dvp22oc0bxc7y" path="res://Assets/escenarios/mounts/m1/2.png" id="2_kl0gw"]
-[ext_resource type="Texture2D" uid="uid://dsyaojxugw4uy" path="res://Assets/escenarios/mounts/m1/3.png" id="3_q6ltw"]
-[ext_resource type="Texture2D" uid="uid://6ba4c17sis4k" path="res://Assets/escenarios/mounts/m1/4.png" id="4_id8au"]
-[ext_resource type="Texture2D" uid="uid://devmqfnjhph7x" path="res://Assets/escenarios/mounts/m1/5.png" id="5_svta1"]
-[ext_resource type="Texture2D" uid="uid://csligpw6dqd6" path="res://Assets/elementos/newlogo@2x.png" id="7_22fn6"]
-[ext_resource type="Texture2D" uid="uid://drxr0nujm07sn" path="res://Assets/personajes/Personajes/Spritesheet 128/Knight_2/Idle.png" id="7_43ub0"]
-[ext_resource type="Texture2D" uid="uid://ds5xbsm4wrl02" path="res://Assets/personajes/Personajes/Spritesheet 128/Knight_2/Run.png" id="8_mpgus"]
+[ext_resource type="Texture2D" uid="uid://c63wiy5v12eil" path="res://Assets/escenarios/mounts/m1/2.png" id="2_kl0gw"]
+[ext_resource type="Texture2D" uid="uid://b6057g1sko4qi" path="res://Assets/escenarios/mounts/m1/3.png" id="3_q6ltw"]
+[ext_resource type="Texture2D" uid="uid://bx8h48rkpam50" path="res://Assets/escenarios/mounts/m1/4.png" id="4_id8au"]
+[ext_resource type="Texture2D" uid="uid://htrsslwxwdff" path="res://Assets/escenarios/mounts/m1/5.png" id="5_svta1"]
+[ext_resource type="Texture2D" uid="uid://djx8xk4tslo20" path="res://Assets/elementos/newlogo@2x.png" id="7_22fn6"]
+[ext_resource type="Texture2D" uid="uid://ct38ja756kclu" path="res://Assets/personajes/Personajes/Spritesheet 128/Knight_2/Idle.png" id="7_43ub0"]
+[ext_resource type="Texture2D" uid="uid://b5vueo45smhij" path="res://Assets/personajes/Personajes/Spritesheet 128/Knight_2/Run.png" id="8_mpgus"]
 [ext_resource type="AudioStream" uid="uid://c1f8w4s7neac2" path="res://Sonidos/Heart of Warrior.mp3" id="8_sende"]
-[ext_resource type="Texture2D" uid="uid://c5mtbdixadpyc" path="res://Assets/personajes/Enemigos/dragon.png" id="9_kuvhx"]
+[ext_resource type="Texture2D" uid="uid://dugisc7f4gajt" path="res://Assets/personajes/Enemigos/dragon.png" id="9_kuvhx"]
 [ext_resource type="StyleBox" uid="uid://bymvmwwxosi11" path="res://Estilos/start_but_press.tres" id="12_7f0vc"]
 [ext_resource type="StyleBox" uid="uid://bapitccgu4u0m" path="res://Estilos/start_but_hover.tres" id="13_8o8i7"]
 [ext_resource type="StyleBox" uid="uid://vb3godjwpkf2" path="res://Estilos/cred_but.tres" id="15_6jbb8"]
@@ -255,6 +255,17 @@ scale = Vector2(0.919229, 0.919228)
 
 [node name="dragon2" type="AnimatedSprite2D" parent="Background/Dragon2"]
 position = Vector2(-94.6448, -120.753)
+scale = Vector2(0.235461, 0.235461)
+sprite_frames = SubResource("SpriteFrames_7u2o3")
+animation = &"Move"
+frame_progress = 0.852397
+
+[node name="Dragon3" type="ParallaxLayer" parent="Background"]
+position = Vector2(1338, 384)
+scale = Vector2(0.919229, 0.919228)
+
+[node name="dragon2" type="AnimatedSprite2D" parent="Background/Dragon3"]
+position = Vector2(799.583, -295.901)
 scale = Vector2(0.235461, 0.235461)
 sprite_frames = SubResource("SpriteFrames_7u2o3")
 animation = &"Move"
