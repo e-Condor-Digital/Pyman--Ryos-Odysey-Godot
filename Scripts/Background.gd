@@ -3,6 +3,7 @@ extends ParallaxBackground
 @onready var mc_1 = $Jugador/Player2
 @onready var dragon = $Dragon/dragon
 @onready var dragon2 = $Dragon2/dragon2
+@onready var dragon_3 = $Dragon3/dragon2
 
 var time_load = 1000
 
@@ -16,6 +17,7 @@ func _process(delta):
 	scroll_base_offset.x -= 30*delta
 	dragon.play("Move")
 	dragon2.play("Move")
+	dragon_3.play("Move")
 	mc_1.play("Run")
 
 
