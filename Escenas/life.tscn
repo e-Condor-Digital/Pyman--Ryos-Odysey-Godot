@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=3 uid="uid://dqeklk523gcu6"]
+
+[ext_resource type="Texture2D" uid="uid://eqeoh2n6mmyq" path="res://Recrusos temporales/SNES_-_Chrono_Trigger_-_Boss_Orb_and_Side_Kick-removebg-preview.png" id="1_7l505"]
+[ext_resource type="Script" path="res://Scripts/life.gd" id="1_guc76"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxa0a"]
+atlas = ExtResource("1_7l505")
+region = Rect2(0, 0, 33, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1ejs"]
+atlas = ExtResource("1_7l505")
+region = Rect2(33, 0, 33, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88bsg"]
+atlas = ExtResource("1_7l505")
+region = Rect2(66, 0, 33, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5cu7"]
+atlas = ExtResource("1_7l505")
+region = Rect2(99, 0, 33, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_boefh"]
+atlas = ExtResource("1_7l505")
+region = Rect2(0, 39, 33, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ql6h6"]
+atlas = ExtResource("1_7l505")
+region = Rect2(33, 39, 33, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54ehm"]
+atlas = ExtResource("1_7l505")
+region = Rect2(66, 39, 33, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tn0je"]
+atlas = ExtResource("1_7l505")
+region = Rect2(99, 39, 33, 39)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yblmp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rxa0a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1ejs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88bsg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5cu7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_boefh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ql6h6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54ehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tn0je")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2mqda"]
+radius = 18.0278
+
+[node name="Node2D" type="Area2D"]
+script = ExtResource("1_guc76")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_yblmp")
+animation = &"idle"
+frame_progress = 0.906951
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("CircleShape2D_2mqda")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
